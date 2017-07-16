@@ -59,15 +59,15 @@ namespace Customers
             switch (format.ToUpperInvariant())
             {
                 case "G":
-                    return String.Format("{0},{1}, +# (###) #### ", $"Customer record: nameof{Name}, nameof{Revenue}, nameof{Phone}");
+                    return String.Format("Customer record: {0}, {1}$, {2:+#(###)####}", Name, Revenue, Convert.ToInt32(Phone));
                 case "P":
-                    return String.Format(" +# (###) ####", $"Customer record: nameof{Phone}");
+                    return String.Format("Customer record: {0:+#(###)####}", Convert.ToInt32(Phone));
                 case "NR":
-                    return $"Customer record: nameof{Name}, nameof{Revenue}";
+                    return $"Customer record: {Name}, {Revenue}$";
                 case "N":
-                    return $"Customer record: nameof{Name}";
+                    return $"Customer record: {Name}";
                 case "R":
-                    return $"Customer record: nameof{Revenue}";
+                    return $"Customer record: {Revenue}$";
 
                 default:
                     throw new FormatException(String.Format("The {0} format string is not supported.", format));

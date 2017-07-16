@@ -40,7 +40,7 @@ namespace CustomerFormatProviders
             switch (format.ToUpperInvariant())
             {
                 case "A":
-                    return $"Name is {customer.Name}. Revenue:{customer.Revenue}, Phone{customer.Phone}";
+                    return $"Name is {customer.Name}. Revenue:{customer.Revenue}, Phone:{customer.Phone}";
                 case "HTML":
                     return $"<html><head></head><body><p>Name is {customer.Name}. Revenue:{customer.Revenue}, Phone{customer.Phone}</p></body>";
                 default:
